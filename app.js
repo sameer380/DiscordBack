@@ -9,11 +9,10 @@ const DATABASE = process.env.DATABASE;
 // Use the express.json() middleware
 app.use(express.json());
 const cors = require("cors");
-app.use(cors());
 // Allow requests from the frontend domain
 app.use(
 	cors({
-		origin: "https://realworld-amber.vercel.app",
+		origin: { BASE_URL },
 		credentials: true, // Enable cookies and other credentials
 	})
 );
@@ -33,3 +32,4 @@ mongoose
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
 });
+
