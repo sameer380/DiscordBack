@@ -13,7 +13,7 @@ app.use(cors());
 // Allow requests from the frontend domain
 app.use(
 	cors({
-		origin: "https://realworld0.vercel.app",
+		origin: "https://realworld-amber.vercel.app",
 		credentials: true, // Enable cookies and other credentials
 	})
 );
